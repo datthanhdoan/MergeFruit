@@ -40,4 +40,5 @@ public class PoolingObject : MonoBehaviour
         obj.SetActive(false);
     }
 
+
 }

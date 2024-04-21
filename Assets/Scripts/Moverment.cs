@@ -7,7 +7,6 @@ public class NewBehaviourScript : MonoBehaviour
     public Vector3[] wayPoints;
     private Vector3 mousePos;
     [SerializeField] private Transform _spawner;
-    [SerializeField] private Rigidbody2D _rbSpawner;
     private void Start()
     {
         _spawner.position = new Vector3(_spawner.position.x, wayPoints[0].y, _spawner.position.z);
@@ -37,7 +36,7 @@ public class NewBehaviourScript : MonoBehaviour
     {
         if (wayPoints == null) return;
 
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.blue;
         foreach (Vector3 wayPoint in wayPoints)
         {
             Gizmos.DrawCube(wayPoint, new Vector3(0.5f, 0.5f, 0.5f));
